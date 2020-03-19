@@ -7,17 +7,7 @@
     </div>
     <GlobalStats />
     <CountryStats />
-    <div class="row mt-5">
-      <div class="col-sm">
-        <p class="text-center">
-          <a
-            target="_blank"
-            class="text-light"
-            href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"
-          >Learn more about COVID-19</a>
-        </p>
-      </div>
-    </div>
+    <Footer />
   </div>
 </template>
 
@@ -25,12 +15,14 @@
 import axios from "axios";
 import GlobalStats from "./components/GlobalStats";
 import CountryStats from "./components/CountryStats";
+import Footer from "./components/Footer";
 
 export default {
   name: "App",
   components: {
     GlobalStats,
-    CountryStats
+    CountryStats,
+    Footer
   },
   data() {
     return {};
@@ -40,6 +32,10 @@ export default {
 
 <style lang="scss">
 $font-family: "Lato", sans-serif;
+
+html {
+  overflow-x: hidden;
+}
 
 body {
   background: #141e30; /* fallback for old browsers */
